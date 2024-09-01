@@ -1,0 +1,43 @@
+{
+   "expo": {
+      "name": "vividChat",
+      "slug": "vividChat",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/images/VIVIDCHAT_LOGO.png",
+      "scheme": "vividchat",
+      "userInterfaceStyle": "automatic",
+      "splash": {
+         "image": "./assets/images/VIVIDCHAT_SPLASH.png",
+         "resizeMode": "contain",
+         "backgroundColor": "#000000"
+      },
+      "androidStatusBar": {
+         "backgroundColor": "#000000",
+         "barStyle": "light-content"
+      },
+      "ios": {
+         "supportsTablet": true
+      },
+      "android": {
+         "adaptiveIcon": {
+            "foregroundImage": "./assets/images/VIVIDCHAT_LOGO.png",
+            "backgroundColor": "#000000"
+         }
+      },
+      "web": {
+         "bundler": "metro",
+         "output": "static",
+         "favicon": "./assets/images/VIVIDCHAT_LOGO.png"
+      },
+      "plugins": [
+         "expo-router"
+      ],
+      "experiments": {
+         "typedRoutes": true
+      },
+      "extra": {
+         "serverApi": "http://10.226.39.211:4000"
+      }
+   }
+}
