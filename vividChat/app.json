@@ -37,7 +37,7 @@
          "typedRoutes": true
       },
       "extra": {
-         "serverApi": "http://10.226.39.211:4000"
+         "serverApi": "http://10.250.166.4:4000"
       }
    }
 }

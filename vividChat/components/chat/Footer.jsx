@@ -4,11 +4,11 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 import useSendMessage from '../../hooks/useSendMessage.js';
 
-const Footer = ({ message, setMessage, userId, chatId, chatPartnerId }) => {
+const Footer = ({ message, setMessage, setMessages, userId, chatId, chatPartnerId }) => {
 	const TextInputRef = useRef();
    const [chat, setchat] = useState(null)
    
-   useSendMessage(chat)
+   useSendMessage({chat, setMessages})
    
 	const handleSendMessage = () => {
 	   if(!message || !userId || !chatId || !chatPartnerId || message.trim().length <1) return;
@@ -16,7 +16,10 @@ const Footer = ({ message, setMessage, userId, chatId, chatPartnerId }) => {
 	      message,
 	      chatId,
          sender: userId,
-         receiver: chatPartnerId
+         receiver: chatPartnerId,
+         status: 'sent',
+         _id: Date.now(),
+         createdAt: Date.now()
 	   };
 	   setMessage(null)
 	   setchat(msg)
